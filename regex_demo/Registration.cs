@@ -20,6 +20,8 @@ namespace regex_demo
             Console.WriteLine("Username=ramesH" + " Match=" + RegexRegistration.ValidLastName("ramesH"));
             //UC3 Valid Email Address
             Console.WriteLine("Email=abc@bl.co" + " Match=" + RegexRegistration.ValidEmail("abc@bl.co"));
+            //UC4 Mobile pre format
+            Console.WriteLine("Mobile Format=91 9679374654 Match=" + RegexRegistration.ValidMobileFormat("91 9679374654"));
 
         }
     }
@@ -42,6 +44,11 @@ namespace regex_demo
         {
             String RegEx = "^[a-z]{3}([.][a-z]+)?[@][a-z]{2}[.][a-z]{2}([.][a-z]{2})?$";
             return Regex.IsMatch(email, RegEx);
+        }
+        public static bool ValidMobileFormat(String mobile)
+        {
+            String RegEx = "^[1-9]{2}[ ][1-9]{10,10}$";
+            return Regex.IsMatch(mobile, RegEx);
         }
 
 
