@@ -22,6 +22,8 @@ namespace regex_demo
             Console.WriteLine("Email=abc@bl.co" + " Match=" + RegexRegistration.ValidEmail("abc@bl.co"));
             //UC4 Mobile pre format
             Console.WriteLine("Mobile Format=91 9679374654 Match=" + RegexRegistration.ValidMobileFormat("91 9679374654"));
+            //UC5  Password rume min eight char
+            Console.WriteLine("PasswordEightCharacter=sdkjSAD1 Match=" + RegexRegistration.PasswordEightChar("sdkjSAD1"));
 
         }
     }
@@ -49,6 +51,11 @@ namespace regex_demo
         {
             String RegEx = "^[1-9]{2}[ ][1-9]{10,10}$";
             return Regex.IsMatch(mobile, RegEx);
+        }
+        public static bool PasswordEightChar(String Password)
+        {
+            String RegEx = "^[1-9A-Za-z]{8,}$";
+            return Regex.IsMatch(Password, RegEx);
         }
 
 
