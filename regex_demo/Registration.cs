@@ -24,6 +24,10 @@ namespace regex_demo
             Console.WriteLine("Mobile Format=91 9679374654 Match=" + RegexRegistration.ValidMobileFormat("91 9679374654"));
             //UC5  Password rume min eight char
             Console.WriteLine("PasswordEightCharacter=sdkjSAD1 Match=" + RegexRegistration.PasswordEightChar("sdkjSAD1"));
+            //UC6 Password One Upper Case
+            Console.WriteLine("PasswordUpperCase=sdAZoaagjk Match=" + RegexRegistration.PasswordUpperCase("sdAZoaagjk"));
+            //UC6 Password One Numberic
+            Console.WriteLine("PasswordOneNumeric=saASk1jlo Match=" + RegexRegistration.PasswordOneNumeric("saASk1jlo"));
 
         }
     }
@@ -57,6 +61,17 @@ namespace regex_demo
             String RegEx = "^[1-9A-Za-z]{8,}$";
             return Regex.IsMatch(Password, RegEx);
         }
+        public static bool PasswordUpperCase(String Password)
+        {
+            String RegEx = "^.*[A-Z]{2}[a-z]{8}$";
+            return Regex.IsMatch(Password, RegEx);
+        }
+        public static bool PasswordOneNumeric(String number)
+        {
+            String RegEx = "^.*([0-9]{1})[A-Za-z]+$";
+            return Regex.IsMatch(number, RegEx);
+        }
+
 
 
 
