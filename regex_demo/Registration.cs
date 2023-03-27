@@ -26,8 +26,11 @@ namespace regex_demo
             Console.WriteLine("PasswordEightCharacter=sdkjSAD1 Match=" + RegexRegistration.PasswordEightChar("sdkjSAD1"));
             //UC6 Password One Upper Case
             Console.WriteLine("PasswordUpperCase=sdAZoaagjk Match=" + RegexRegistration.PasswordUpperCase("sdAZoaagjk"));
-            //UC6 Password One Numberic
+            //UC7 Password One Numberic
             Console.WriteLine("PasswordOneNumeric=saASk1jlo Match=" + RegexRegistration.PasswordOneNumeric("saASk1jlo"));
+            //UC8  One special Character 
+            Console.WriteLine("PasswordOneSpecialChar=saA?Skjlo" + RegexRegistration.PasswordOneSpecialChar("saA?Skjlo"));
+            
 
         }
     }
@@ -70,6 +73,12 @@ namespace regex_demo
         {
             String RegEx = "^.*([0-9]{1})[A-Za-z]+$";
             return Regex.IsMatch(number, RegEx);
+        }
+        public static bool PasswordOneSpecialChar(String password)
+        {
+            // String RegEx = "^.*([?.!@#$%^&*\\()/-'\"]{1})[A-Za-z]+$";
+            String RegEx = "^.*[<?.!@#$%&*\\()'\"/->]{1}[A-Za-z]+$";
+            return Regex.IsMatch(password, RegEx);
         }
 
 
