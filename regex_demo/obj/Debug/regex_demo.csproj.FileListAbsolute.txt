@@ -1,0 +1,8 @@
+D:\Visual_studio_projects\regex_demo\regex_demo\bin\Debug\regex_demo.exe.config
+D:\Visual_studio_projects\regex_demo\regex_demo\bin\Debug\regex_demo.exe
+D:\Visual_studio_projects\regex_demo\regex_demo\bin\Debug\regex_demo.pdb
+D:\Visual_studio_projects\regex_demo\regex_demo\obj\Debug\regex_demo.csproj.AssemblyReference.cache
+D:\Visual_studio_projects\regex_demo\regex_demo\obj\Debug\regex_demo.csproj.SuggestedBindingRedirects.cache
+D:\Visual_studio_projects\regex_demo\regex_demo\obj\Debug\regex_demo.csproj.CoreCompileInputs.cache
+D:\Visual_studio_projects\regex_demo\regex_demo\obj\Debug\regex_demo.exe
+D:\Visual_studio_projects\regex_demo\regex_demo\obj\Debug\regex_demo.pdb
