@@ -30,7 +30,21 @@ namespace regex_demo
             Console.WriteLine("PasswordOneNumeric=saASk1jlo Match=" + RegexRegistration.PasswordOneNumeric("saASk1jlo"));
             //UC8  One special Character 
             Console.WriteLine("PasswordOneSpecialChar=saA?Skjlo" + RegexRegistration.PasswordOneSpecialChar("saA?Skjlo"));
-            
+            //UC9 AllEmailCharType
+            Console.WriteLine("All Email Type Test------");
+            Console.WriteLine("Valid Email=abc@yahoo.com Match=" + RegexRegistration.ValidEmails("abc@yahoo.com"));
+            Console.WriteLine("Valid Email=abc-100@yahoo.com, Match=" + RegexRegistration.ValidEmails("abc-100@yahoo.com"));
+            Console.WriteLine("Valid Email=abc.100@yahoo.com Match=" + RegexRegistration.ValidEmails("abc.100@yahoo.com"));
+            Console.WriteLine("Valid Email=abc111@abc.com, Match=" + RegexRegistration.ValidEmails("abc111@abc.com"));
+            Console.WriteLine("Valid Email=abc-100@abc.net Match=" + RegexRegistration.ValidEmails("abc-100@abc.net"));
+            Console.WriteLine("Valid Email=abc.100@abc.com.au Match=" + RegexRegistration.ValidEmails("abc.100@abc.com.au"));
+            Console.WriteLine("Valid Email=abc@1.com Match=" + RegexRegistration.ValidEmails("abc@1.com"));
+            Console.WriteLine("Valid Email=abc@gmail.com.com Match=" + RegexRegistration.ValidEmails("abc@gmail.com.com"));
+            Console.WriteLine("Valid Email=abc+100@gmail.com Match=" + RegexRegistration.ValidEmails("abc+100@gmail.com"));
+
+
+
+
 
         }
     }
@@ -79,6 +93,13 @@ namespace regex_demo
             // String RegEx = "^.*([?.!@#$%^&*\\()/-'\"]{1})[A-Za-z]+$";
             String RegEx = "^.*[<?.!@#$%&*\\()'\"/->]{1}[A-Za-z]+$";
             return Regex.IsMatch(password, RegEx);
+        }
+        public static bool ValidEmails(String email)
+        {
+            //String RegEx = "^[a-z]{3}[@][a-z]+[.][a-z]{3}$";
+            //3String RegEx = "^[a-z]{3}[.-][0-9]{3}[@][a-z]+[.][a-z]{3}$";
+            String RegEx = "^[a-z]{3}([+.-])?([0-9]{3})?[@][a-z0-9]+[.][a-z]{3}([.][a-z]{2,})?$";
+            return Regex.IsMatch(email, RegEx);
         }
 
 
